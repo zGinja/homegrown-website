@@ -1,55 +1,97 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Homegrown Bakery Cafe | Ceres</title>
+    <title>Homegrown Bakery Cafe | Ceres, Western Cape</title>
 
     <meta
         name="description"
-        content="Visit Homegrown Bakery Cafe in Ceres, Western Cape for freshly baked treats, delicious food, coffee and a warm local cafe experience."
+        content="Visit Homegrown Bakery Cafe in Ceres, Western Cape for freshly baked treats, breakfast, lunch, coffee and a warm local cafe experience."
     >
-
-    <meta
-        name="keywords"
-        content="Homegrown Bakery Cafe, Ceres bakery, Ceres cafe, bakery Ceres, coffee Ceres, restaurants Ceres, Western Cape"
-    >
-
     <meta name="author" content="Homegrown Bakery Cafe">
+    <meta name="theme-color" content="#394936">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Homegrown Bakery Cafe | Ceres">
+    <meta
+        property="og:description"
+        content="Freshly baked food, good coffee and a warm local cafe experience in Ceres."
+    >
+    <meta property="og:image" content="images/big view.jpg">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
 
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "Homegrown Bakery Cafe",
+        "description": "Bakery cafe serving breakfast, lunch, coffee, pastries and local favourites in Ceres, Western Cape.",
+        "telephone": "+27 23 007 0299",
+        "email": "matilda@sweetspot.co.za",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1924 Phillip Street",
+            "addressLocality": "Ceres",
+            "addressRegion": "Western Cape",
+            "addressCountry": "ZA"
+        }
+    }
+    </script>
 </head>
 
 <body>
 
-    <header>
-        <nav class="navbar">
+    <div class="site-loader" id="siteLoader" aria-hidden="true">
+        <div class="loader-mark">HG</div>
+        <p>Freshly baked. Locally grown.</p>
+    </div>
 
-            <div class="logo">
+    <header id="siteHeader">
+        <nav class="navbar" aria-label="Main navigation">
+
+            <a class="logo" href="#home" aria-label="Homegrown home">
                 HOMEGROWN
                 <span>BAKERY CAFE</span>
-            </div>
+            </a>
 
-            <div class="menu-toggle" id="menuToggle">
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Open menu"
+                aria-controls="navLinks"
+                aria-expanded="false"
+            >
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#featured">Favourites</a></li>
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Visit</a></li>
             </ul>
 
         </nav>
     </header>
-
 
     <main>
 
@@ -57,15 +99,13 @@
 
         <section id="home" class="hero">
 
-            <div class="hero-content">
+            <div class="hero-content reveal">
 
-                <p class="hero-location">
-                    CERES · WESTERN CAPE
-                </p>
+                <p class="hero-location">CERES · WESTERN CAPE</p>
 
                 <h1>
                     Freshly Baked.<br>
-                    Locally Grown.
+                    Made with Heart.
                 </h1>
 
                 <p class="hero-description">
@@ -74,110 +114,178 @@
                 </p>
 
                 <div class="hero-buttons">
-
-                    <a href="#menu" class="button">
-                        Explore Our Menu
-                    </a>
-
-                    <a href="#contact" class="button secondary">
-                        Visit Us
-                    </a>
-
+                    <a href="#menu" class="button">Explore Our Menu</a>
+                    <a href="#contact" class="button secondary">Plan Your Visit</a>
                 </div>
 
-                <div class="hero-bottom">
-
+                <div class="hero-bottom" aria-label="Homegrown offers">
                     <span>Bakery</span>
                     <span>•</span>
                     <span>Cafe</span>
                     <span>•</span>
                     <span>Local Goods</span>
+                </div>
+
+            </div>
+
+            <a class="scroll-indicator" href="#about" aria-label="Scroll to About">
+                <span>Scroll</span>
+                <span class="scroll-arrow">↓</span>
+            </a>
+
+        </section>
+
+        <div class="wave-divider" aria-hidden="true">
+            <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+                <path d="M0,45 C240,100 480,-10 720,45 C960,100 1200,-10 1440,45 L1440,90 L0,90 Z"></path>
+            </svg>
+        </div>
+
+
+        <!-- ABOUT -->
+
+        <section id="about" class="about reveal">
+
+            <div class="about-text">
+
+                <p class="small-heading">OUR STORY</p>
+
+                <h2>
+                    A place where mornings<br>
+                    begin with good coffee.
+                </h2>
+
+                <p>
+                    Homegrown Bakery Cafe brings together fresh baking,
+                    local produce and a relaxed atmosphere in the heart of Ceres.
+                </p>
+
+                <p>
+                    Whether you're stopping by for breakfast, meeting friends
+                    or picking up something freshly baked, Homegrown is designed
+                    to feel warm, familiar and welcoming.
+                </p>
+
+                <p class="about-quote">Made fresh. Served warmly.</p>
+
+                <div class="about-features">
+
+                    <div class="about-feature">
+                        <span class="icon-circle" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M3 8h13v5a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm13 2h2a3 3 0 0 1 0 6h-2M6 4h7M7 2h5"></path>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3>Fresh Coffee</h3>
+                            <p>Prepared for slow mornings and good conversations.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-feature">
+                        <span class="icon-circle" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M4 17c2-7 6-11 12-13 1 6-2 12-9 15M7 19l10-10"></path>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3>Freshly Baked</h3>
+                            <p>Pastries and treats made for every visit.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-feature">
+                        <span class="icon-circle" aria-hidden="true">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 21V10M7 14c-3 0-5-2-5-5 4 0 7 2 7 5M17 10c3 0 5-2 5-5-4 0-7 2-7 5"></path>
+                            </svg>
+                        </span>
+                        <div>
+                            <h3>Local Character</h3>
+                            <p>A warm cafe experience rooted in Ceres.</p>
+                        </div>
+                    </div>
 
                 </div>
 
+            </div>
+
+            <div class="about-visual">
+                <div class="about-accent"></div>
+
+                <div class="about-image">
+                    <img
+                        src="images/Fireplace.jpg"
+                        alt="Warm interior at Homegrown Bakery Cafe"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+
+                <div class="about-badge">
+                    <strong>Warm &amp; Local</strong>
+                    <span>Freshly made in Ceres</span>
+                </div>
             </div>
 
         </section>
 
 
-        <!-- ABOUT -->
+        <!-- FEATURED DISHES -->
 
-        <section id="about" class="about">
+        <section id="featured" class="featured-section">
 
-    <div class="about-text">
-
-        <p class="small-heading">OUR STORY</p>
-
-        <h2>
-            A place where mornings<br>
-            begin with good coffee.
-        </h2>
-
-        <p>
-            Homegrown Bakery Cafe brings together fresh baking,
-            local produce and a relaxed atmosphere in the heart of Ceres.
-        </p>
-
-        <p>
-            Whether you're stopping by for breakfast, meeting friends
-            or picking up something freshly baked, Homegrown is designed
-            to feel warm, familiar and welcoming.
-        </p>
-
-        <p class="about-quote">
-            Made fresh. Served warmly.
-        </p>
-
-        <div class="about-features">
-
-            <div class="about-feature">
-                <span class="about-icon">☕</span>
-
-                <div>
-                    <h3>Fresh Coffee</h3>
-                    <p>Prepared for slow mornings and good conversations.</p>
-                </div>
+            <div class="section-heading reveal">
+                <p class="small-heading">HOMEGROWN FAVOURITES</p>
+                <h2>Popular reasons to stop by</h2>
+                <p>A few menu favourites for breakfast, lunch and something sweet.</p>
             </div>
 
-            <div class="about-feature">
-                <span class="about-icon">🥐</span>
+            <div class="featured-grid">
 
-                <div>
-                    <h3>Freshly Baked</h3>
-                    <p>Pastries and treats made for every visit.</p>
-                </div>
+                <article class="featured-card reveal">
+                    <img
+                        src="images/Gallery1.jpg"
+                        alt="Avo toast"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                    <div class="featured-card-content">
+                        <p class="small-heading">BREAKFAST</p>
+                        <h3>Avo Toast</h3>
+                        <p>Sourdough toast, mashed avo and poached eggs.</p>
+                    </div>
+                </article>
+
+                <article class="featured-card reveal">
+                    <img
+                        src="images/Gallery2.jpg"
+                        alt="Homegrown burger"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                    <div class="featured-card-content">
+                        <p class="small-heading">LUNCH</p>
+                        <h3>Homegrown Burger</h3>
+                        <p>Beef patty, fresh toppings, caramelised onions and chips.</p>
+                    </div>
+                </article>
+
+                <article class="featured-card reveal">
+                    <img
+                        src="images/Pastry2.jpg"
+                        alt="Belgian waffle"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                    <div class="featured-card-content">
+                        <p class="small-heading">SWEET</p>
+                        <h3>Belgium Waffle</h3>
+                        <p>Choose plain, Nutella or banana and caramel.</p>
+                    </div>
+                </article>
+
             </div>
-
-            <div class="about-feature">
-                <span class="about-icon">🌿</span>
-
-                <div>
-                    <h3>Local Character</h3>
-                    <p>A warm café experience rooted in Ceres.</p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <div class="about-visual">
-
-        <div class="about-accent"></div>
-
-        <div class="about-image">
-            <img
-                src="images/Fireplace.jpg"
-                alt="Warm interior at Homegrown Bakery Cafe">
-        </div>
-
-        <div class="about-badge">
-            <strong>Warm & Local</strong>
-            <span>Freshly made in Ceres</span>
-        </div>
-
-    </div>
 
         </section>
 
@@ -186,7 +294,7 @@
 
         <section id="menu" class="menu">
 
-            <div class="section-heading">
+            <div class="section-heading reveal">
                 <p class="small-heading">FRESH FROM THE KITCHEN</p>
                 <h2>Something for Everyone</h2>
                 <p>
@@ -197,7 +305,7 @@
 
             <div class="menu-cards">
 
-                <article class="menu-card">
+                <article class="menu-card reveal">
                     <h3>Breakfast</h3>
                     <p>
                         Avo toast, bagels, omelettes, eggs Benedict
@@ -205,15 +313,15 @@
                     </p>
                 </article>
 
-                <article class="menu-card">
-                    <h3>Lunch & Light Meals</h3>
+                <article class="menu-card reveal">
+                    <h3>Lunch &amp; Light Meals</h3>
                     <p>
                         Fresh salads, soups, sandwiches and hearty meals
                         prepared with quality ingredients.
                     </p>
                 </article>
 
-                <article class="menu-card">
+                <article class="menu-card reveal">
                     <h3>Sweet Treats</h3>
                     <p>
                         Belgian waffles, cakes, pastries, muffins
@@ -223,7 +331,7 @@
 
             </div>
 
-            <div class="menu-view-heading">
+            <div class="menu-view-heading reveal">
                 <p class="small-heading">EXPLORE THE MENU</p>
                 <h3>What are you in the mood for?</h3>
                 <p>Select a category below to view the available options.</p>
@@ -231,7 +339,7 @@
 
             <div class="full-menu">
 
-                <details class="menu-category" open>
+                <details class="menu-category reveal" open>
                     <summary>
                         <span>Breakfast</span>
                         <span class="menu-category-count">8 options</span>
@@ -240,13 +348,8 @@
                     <div class="menu-items">
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Avo Toast</h4>
-                            </div>
-                            <p>
-                                Sourdough toast with mashed avo and poached eggs.
-                                Add bacon R25 or hollandaise sauce R20.
-                            </p>
+                            <div class="menu-item-heading"><h4>Avo Toast</h4></div>
+                            <p>Sourdough toast with mashed avo and poached eggs. Add bacon R25 or hollandaise sauce R20.</p>
                         </article>
 
                         <article class="menu-item">
@@ -254,73 +357,43 @@
                                 <h4>Health Breakfast</h4>
                                 <span class="diet-label">Vegetarian</span>
                             </div>
-                            <p>
-                                Double cream yoghurt, toasted nut muesli with coconut,
-                                cinnamon, ginger, fresh fruit and honey.
-                            </p>
+                            <p>Double cream yoghurt, toasted nut muesli with coconut, cinnamon, ginger, fresh fruit and honey.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Mini Breakfast</h4>
-                            </div>
+                            <div class="menu-item-heading"><h4>Mini Breakfast</h4></div>
                             <p>One egg, bacon, roasted tomato and preserves.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Full Breakfast</h4>
-                            </div>
-                            <p>
-                                Two eggs, bacon, pork sausage, mushrooms,
-                                roasted tomato with toast and preserves.
-                            </p>
+                            <div class="menu-item-heading"><h4>Full Breakfast</h4></div>
+                            <p>Two eggs, bacon, pork sausage, mushrooms, roasted tomato with toast and preserves.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Bacon &amp; Egg Bagel</h4>
-                            </div>
-                            <p>
-                                Two scrambled eggs with rashers of bacon on top of a bagel
-                                with cream cheese. Add avocado R20.
-                            </p>
+                            <div class="menu-item-heading"><h4>Bacon &amp; Egg Bagel</h4></div>
+                            <p>Two scrambled eggs with rashers of bacon on a bagel with cream cheese. Add avocado R20.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Smoked Salmon &amp; Egg Bagel</h4>
-                            </div>
-                            <p>
-                                Two scrambled eggs with smoked salmon on top of a bagel
-                                with cream cheese.
-                            </p>
+                            <div class="menu-item-heading"><h4>Smoked Salmon &amp; Egg Bagel</h4></div>
+                            <p>Two scrambled eggs with smoked salmon on a bagel with cream cheese.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Omelette</h4>
-                            </div>
-                            <p>
-                                Two egg omelette with bacon, mushrooms, cheddar
-                                and mozzarella cheese, served with toast.
-                            </p>
+                            <div class="menu-item-heading"><h4>Omelette</h4></div>
+                            <p>Two egg omelette with bacon, mushrooms, cheddar and mozzarella cheese, served with toast.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Eggs Benedict</h4>
-                            </div>
-                            <p>
-                                Choose bacon and spinach or smoked salmon,
-                                served with two poached eggs on an English muffin.
-                            </p>
+                            <div class="menu-item-heading"><h4>Eggs Benedict</h4></div>
+                            <p>Choose bacon and spinach or smoked salmon, served with two poached eggs on an English muffin.</p>
                         </article>
 
                     </div>
                 </details>
 
-                <details class="menu-category">
+                <details class="menu-category reveal">
                     <summary>
                         <span>Salads</span>
                         <span class="menu-category-count">3 options</span>
@@ -329,40 +402,24 @@
                     <div class="menu-items">
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Chicken Salad</h4>
-                            </div>
-                            <p>
-                                Chicken strips, tomatoes, cucumber, avocado, croutons,
-                                bacon and lettuce served with a citrus dressing.
-                            </p>
+                            <div class="menu-item-heading"><h4>Chicken Salad</h4></div>
+                            <p>Chicken strips, tomatoes, cucumber, avocado, croutons, bacon and lettuce served with a citrus dressing.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Smoked Salmon Salad</h4>
-                            </div>
-                            <p>
-                                Tomatoes, cucumber, celery, pickled ginger, peppers,
-                                cous-cous, lettuce and salmon roses.
-                            </p>
+                            <div class="menu-item-heading"><h4>Smoked Salmon Salad</h4></div>
+                            <p>Tomatoes, cucumber, celery, pickled ginger, peppers, cous-cous, lettuce and salmon roses.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Ostrich Salad</h4>
-                            </div>
-                            <p>
-                                Marinated ostrich fillet served on a bed of lettuce
-                                with oven roasted vegetables, lentils and a poached egg,
-                                drizzled with a honey and mustard dressing.
-                            </p>
+                            <div class="menu-item-heading"><h4>Ostrich Salad</h4></div>
+                            <p>Marinated ostrich fillet with roasted vegetables, lentils, a poached egg and honey-mustard dressing.</p>
                         </article>
 
                     </div>
                 </details>
 
-                <details class="menu-category">
+                <details class="menu-category reveal">
                     <summary>
                         <span>Meals</span>
                         <span class="menu-category-count">8 options</span>
@@ -375,82 +432,47 @@
                                 <h4>Tomato &amp; Basil Soup</h4>
                                 <span class="diet-label">V / Veg</span>
                             </div>
-                            <p>
-                                Roasted tomato and onion soup served with toasted
-                                sourdough bread.
-                            </p>
+                            <p>Roasted tomato and onion soup served with toasted sourdough bread.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Butternut Soup</h4>
-                            </div>
+                            <div class="menu-item-heading"><h4>Butternut Soup</h4></div>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Chicken Curry</h4>
-                            </div>
-                            <p>
-                                Chicken breasts infused with aromatic spices and
-                                coconut milk, served with rice and seasonal vegetables.
-                            </p>
+                            <div class="menu-item-heading"><h4>Chicken Curry</h4></div>
+                            <p>Chicken breasts infused with aromatic spices and coconut milk, served with rice and seasonal vegetables.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Quiche</h4>
-                            </div>
-                            <p>
-                                Quiche with a cheddar cheese crust and a green garden salad.
-                                Options: bacon, spinach and cheese; butternut and feta; or biltong.
-                            </p>
+                            <div class="menu-item-heading"><h4>Quiche</h4></div>
+                            <p>Cheddar-cheese crust with green salad. Choose bacon, spinach and cheese; butternut and feta; or biltong.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Homegrown Burger</h4>
-                            </div>
-                            <p>
-                                Sesame seeded bun, beef patty, tomato, lettuce, gherkins
-                                and caramelised onions, served with chips.
-                            </p>
+                            <div class="menu-item-heading"><h4>Homegrown Burger</h4></div>
+                            <p>Sesame seeded bun, beef patty, tomato, lettuce, gherkins and caramelised onions, served with chips.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Chicken Schnitzel</h4>
-                            </div>
-                            <p>
-                                Free range chicken breast schnitzel served with coleslaw
-                                and potato chips. Add cheese sauce R25.
-                            </p>
+                            <div class="menu-item-heading"><h4>Chicken Schnitzel</h4></div>
+                            <p>Free range chicken breast schnitzel served with coleslaw and potato chips. Add cheese sauce R25.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Chicken Pie</h4>
-                            </div>
-                            <p>
-                                Free range chicken pot pie with creamy mushrooms and peas,
-                                served with a green salad.
-                            </p>
+                            <div class="menu-item-heading"><h4>Chicken Pie</h4></div>
+                            <p>Free range chicken pot pie with creamy mushrooms and peas, served with a green salad.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Lasagne</h4>
-                            </div>
-                            <p>
-                                Lean mince, handrolled pasta and cheddar cheese,
-                                served with green salad.
-                            </p>
+                            <div class="menu-item-heading"><h4>Lasagne</h4></div>
+                            <p>Lean mince, handrolled pasta and cheddar cheese, served with green salad.</p>
                         </article>
 
                     </div>
                 </details>
 
-                <details class="menu-category">
+                <details class="menu-category reveal">
                     <summary>
                         <span>Sandwiches</span>
                         <span class="menu-category-count">5 options</span>
@@ -459,87 +481,48 @@
                     <div class="menu-items">
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Chicken Chorizo Toasted</h4>
-                            </div>
-                            <p>
-                                Roasted free range chicken breast, chorizo,
-                                sundried tomato pesto, mayonnaise and red onion.
-                            </p>
+                            <div class="menu-item-heading"><h4>Chicken Chorizo Toasted</h4></div>
+                            <p>Roasted chicken breast, chorizo, sundried tomato pesto, mayonnaise and red onion.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Chicken Mayonnaise Toasted</h4>
-                            </div>
-                            <p>
-                                Roasted free range chicken breast with mayonnaise
-                                and red onion.
-                            </p>
+                            <div class="menu-item-heading"><h4>Chicken Mayonnaise Toasted</h4></div>
+                            <p>Roasted chicken breast with mayonnaise and red onion.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Smoked Salmon Open</h4>
-                            </div>
-                            <p>
-                                Smoked salmon, cream cheese, pickled cucumber,
-                                black pepper and fresh tomato.
-                            </p>
+                            <div class="menu-item-heading"><h4>Smoked Salmon Open</h4></div>
+                            <p>Smoked salmon, cream cheese, pickled cucumber, black pepper and fresh tomato.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Tomato Brie Open</h4>
-                            </div>
-                            <p>
-                                Sundried tomato, chickpea hummus, brie cheese,
-                                mixed greens and balsamic vinegar reduction.
-                            </p>
+                            <div class="menu-item-heading"><h4>Tomato Brie Open</h4></div>
+                            <p>Sundried tomato, chickpea hummus, brie cheese, mixed greens and balsamic reduction.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Salami Toasted</h4>
-                            </div>
-                            <p>
-                                Salami, cheddar cheese, basil pesto mayonnaise,
-                                tomato, red onion and peppadew.
-                            </p>
+                            <div class="menu-item-heading"><h4>Salami Toasted</h4></div>
+                            <p>Salami, cheddar cheese, basil pesto mayonnaise, tomato, red onion and peppadew.</p>
                         </article>
 
                     </div>
                 </details>
 
-                <details class="menu-category">
+                <details class="menu-category reveal">
                     <summary>
                         <span>Kiddies</span>
                         <span class="menu-category-count">4 options</span>
                     </summary>
 
                     <div class="menu-items compact-menu-items">
-
-                        <article class="menu-item">
-                            <h4>Scrambled Egg &amp; Bacon with Toast</h4>
-                        </article>
-
-                        <article class="menu-item">
-                            <h4>Mac &amp; Cheese</h4>
-                        </article>
-
-                        <article class="menu-item">
-                            <h4>Chicken Strips with Chips</h4>
-                        </article>
-
-                        <article class="menu-item">
-                            <h4>Ham &amp; Cheese Pizza</h4>
-                            <p>Thin crust.</p>
-                        </article>
-
+                        <article class="menu-item"><h4>Scrambled Egg &amp; Bacon with Toast</h4></article>
+                        <article class="menu-item"><h4>Mac &amp; Cheese</h4></article>
+                        <article class="menu-item"><h4>Chicken Strips with Chips</h4></article>
+                        <article class="menu-item"><h4>Ham &amp; Cheese Pizza</h4><p>Thin crust.</p></article>
                     </div>
                 </details>
 
-                <details class="menu-category">
+                <details class="menu-category reveal">
                     <summary>
                         <span>Dessert</span>
                         <span class="menu-category-count">6 options</span>
@@ -548,66 +531,33 @@
                     <div class="menu-items">
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Belgium Waffle Plain</h4>
-                                <strong>R75</strong>
-                            </div>
-                            <p>
-                                Belgium waffle with maple syrup dusted with icing sugar.
-                                Add ice cream or cream R15.
-                            </p>
+                            <div class="menu-item-heading"><h4>Belgium Waffle Plain</h4><strong>R75</strong></div>
+                            <p>Maple syrup and icing sugar. Add ice cream or cream R15.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Belgium Waffle Nutella</h4>
-                                <strong>R95</strong>
-                            </div>
-                            <p>
-                                Belgium waffle with Nutella, berries and roasted flaked almonds.
-                                Add ice cream or cream R15.
-                            </p>
+                            <div class="menu-item-heading"><h4>Belgium Waffle Nutella</h4><strong>R95</strong></div>
+                            <p>Nutella, berries and roasted flaked almonds. Add ice cream or cream R15.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Belgium Waffle Banana</h4>
-                                <strong>R85</strong>
-                            </div>
-                            <p>
-                                Belgium waffle with caramel and banana.
-                                Add ice cream or cream R15.
-                            </p>
+                            <div class="menu-item-heading"><h4>Belgium Waffle Banana</h4><strong>R85</strong></div>
+                            <p>Caramel and banana. Add ice cream or cream R15.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Cakes &amp; Pastries</h4>
-                                <strong>R25</strong>
-                            </div>
+                            <div class="menu-item-heading"><h4>Cakes &amp; Pastries</h4><strong>R25</strong></div>
                             <p>Choose from our cake display.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Scone</h4>
-                                <strong>R30</strong>
-                            </div>
-                            <p>
-                                Freshly baked scone. Add cream R15, jam R10
-                                or cheese R15.
-                            </p>
+                            <div class="menu-item-heading"><h4>Scone</h4><strong>R30</strong></div>
+                            <p>Freshly baked scone. Add cream R15, jam R10 or cheese R15.</p>
                         </article>
 
                         <article class="menu-item">
-                            <div class="menu-item-heading">
-                                <h4>Muffin</h4>
-                                <strong>R30</strong>
-                            </div>
-                            <p>
-                                Bran muffin baked with yogurt and raisins.
-                                Add cream R15, jam R10 or cheese R15.
-                            </p>
+                            <div class="menu-item-heading"><h4>Muffin</h4><strong>R30</strong></div>
+                            <p>Bran muffin baked with yoghurt and raisins. Add cream R15, jam R10 or cheese R15.</p>
                         </article>
 
                     </div>
@@ -622,76 +572,60 @@
 
         <section id="experience" class="experience">
 
-            <div class="section-heading">
-
+            <div class="section-heading reveal">
                 <p class="small-heading">MORE THAN A CAFE</p>
-
                 <h2>The Homegrown Experience</h2>
-
-                <p>
-                    A place to enjoy good food, discover local products
-                    and spend time with the people who matter.
-                </p>
-
+                <p>A place to enjoy good food, discover local products and spend time with the people who matter.</p>
             </div>
 
-            <div class="experience-grid">
+            <div class="experience-story">
 
-                <article class="experience-card">
-
-                    <img src="images/Pastry1.jpg" alt="Freshly baked pastries">
-
-                    <div class="experience-card-content">
-
-                        <p class="small-heading">BAKERY & CAFE</p>
-
+                <article class="experience-row reveal">
+                    <div class="experience-row-image">
+                        <img
+                            src="images/Pastry1.jpg"
+                            alt="Freshly baked pastries"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+                    <div class="experience-row-content">
+                        <p class="small-heading">BAKERY &amp; CAFE</p>
                         <h3>Fresh from the Oven</h3>
-
-                        <p>
-                            Enjoy freshly baked treats, delicious food
-                            and a welcoming café atmosphere.
-                        </p>
-
+                        <p>Enjoy freshly baked treats, delicious food and a welcoming cafe atmosphere.</p>
                     </div>
-
                 </article>
 
-                <article class="experience-card">
-
-                    <img src="images/Fireplace.jpg" alt="Homegrown interior">
-
-                    <div class="experience-card-content">
-
+                <article class="experience-row reverse reveal">
+                    <div class="experience-row-image">
+                        <img
+                            src="images/Fireplace.jpg"
+                            alt="Warm Homegrown interior"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+                    <div class="experience-row-content">
                         <p class="small-heading">A PLACE TO RELAX</p>
-
                         <h3>Feel at Home</h3>
-
-                        <p>
-                            Take your time, enjoy your coffee and settle
-                            into the relaxed Homegrown atmosphere.
-                        </p>
-
+                        <p>Take your time, enjoy your coffee and settle into the relaxed Homegrown atmosphere.</p>
                     </div>
-
                 </article>
 
-                <article class="experience-card">
-
-                    <img src="images/big view.jpg" alt="Homegrown Ceres">
-
-                    <div class="experience-card-content">
-
-                        <p class="small-heading">CERES</p>
-
-                        <h3>Discover Local</h3>
-
-                        <p>
-                            Experience a taste of Ceres and discover
-                            products and experiences close to home.
-                        </p>
-
+                <article class="experience-row reveal">
+                    <div class="experience-row-image">
+                        <img
+                            src="images/big view.jpg"
+                            alt="Homegrown in Ceres"
+                            loading="lazy"
+                            decoding="async"
+                        >
                     </div>
-
+                    <div class="experience-row-content">
+                        <p class="small-heading">CERES</p>
+                        <h3>Discover Local</h3>
+                        <p>Experience a taste of Ceres and discover products and experiences close to home.</p>
+                    </div>
                 </article>
 
             </div>
@@ -703,52 +637,64 @@
 
         <section id="gallery" class="gallery">
 
-            <div class="section-heading">
-
+            <div class="section-heading reveal">
                 <p class="small-heading">A GLIMPSE OF HOMEGROWN</p>
-
                 <h2>See What's Waiting for You</h2>
+                <p>A few moments from the Homegrown experience in Ceres.</p>
+            </div>
 
-                <p>
-                    A few moments from the Homegrown experience in Ceres.
-                </p>
+            <div class="gallery-shell reveal">
+
+                <button class="gallery-control previous" id="galleryPrev" type="button" aria-label="Previous images">←</button>
+
+                <div class="gallery-track" id="galleryTrack">
+
+                    <figure class="gallery-slide large">
+                        <img src="images/big view.jpg" alt="Homegrown Ceres" loading="lazy" decoding="async">
+                    </figure>
+
+                    <figure class="gallery-slide">
+                        <img src="images/Gallery1.jpg" alt="Homegrown Bakery Cafe" loading="lazy" decoding="async">
+                    </figure>
+
+                    <figure class="gallery-slide">
+                        <img src="images/Gallery2.jpg" alt="Homegrown Cafe" loading="lazy" decoding="async">
+                    </figure>
+
+                    <figure class="gallery-slide">
+                        <img src="images/Pastry1.jpg" alt="Fresh Homegrown pastries" loading="lazy" decoding="async">
+                    </figure>
+
+                    <figure class="gallery-slide">
+                        <img src="images/Pastry2.jpg" alt="Fresh pastries" loading="lazy" decoding="async">
+                    </figure>
+
+                </div>
+
+                <button class="gallery-control next" id="galleryNext" type="button" aria-label="Next images">→</button>
 
             </div>
 
-            <div class="gallery-grid">
+        </section>
 
-                <div class="gallery-main">
-                    <img
-                        src="images/big view.jpg"
-                        alt="Homegrown Ceres">
-                </div>
 
-                <div class="gallery-small">
-                    <img
-                        src="images/Gallery1.jpg"
-                        alt="Homegrown Bakery Cafe">
-                </div>
+        <!-- REVIEW LINK -->
 
-                <div class="gallery-small">
-                    <img
-                        src="images/Gallery2.jpg"
-                        alt="Homegrown Cafe">
-                </div>
-
-                <div class="gallery-small">
-                    <img
-                        src="images/Pastry1.jpg"
-                        alt="Fresh Homegrown pastries">
-                </div>
-
-                <div class="gallery-small">
-                    <img
-                        src="images/Pastry2.jpg"
-                        alt="Fresh pastries">
-                </div>
-
+        <section class="review-strip reveal">
+            <div>
+                <p class="review-stars" aria-label="Five stars">★★★★★</p>
+                <h2>Loved by locals in Ceres</h2>
+                <p>See Homegrown on Google for directions, photos and customer feedback.</p>
             </div>
 
+            <a
+                class="button"
+                href="https://www.google.com/maps/search/?api=1&query=Homegrown+Bakery+Cafe+Ceres+Western+Cape"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View on Google
+            </a>
         </section>
 
 
@@ -758,10 +704,9 @@
 
             <div class="contact-wrapper">
 
-                <div class="contact-info">
+                <div class="contact-info reveal">
 
                     <p class="small-heading">COME VISIT US</p>
-
                     <h2>Find Your Way to Homegrown</h2>
 
                     <p class="contact-description">
@@ -769,77 +714,85 @@
                         a warm Homegrown experience in the heart of Ceres.
                     </p>
 
-                    <div class="contact-details">
+                    <div class="contact-cards">
 
-                        <div class="contact-item">
+                        <article class="contact-card">
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+                                    <circle cx="12" cy="10" r="2.5"></circle>
+                                </svg>
+                            </span>
+                            <div>
+                                <h3>Visit Us</h3>
+                                <p>1924 Phillip Street<br>Ceres, Western Cape</p>
+                            </div>
+                        </article>
 
-                            <h3>📍 Address</h3>
+                        <article class="contact-card">
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M5 4h4l2 5-3 2c1.5 3 3.5 5 6.5 6.5l2-3 5 2v4c0 1-1 2-2 2C10 22 2 14 2 6c0-1 1-2 3-2Z"></path>
+                                </svg>
+                            </span>
+                            <div>
+                                <h3>Call Us</h3>
+                                <a href="tel:+27230070299">023 007 0299</a>
+                            </div>
+                        </article>
 
-                            <p>
-                                1924 Phillip Street<br>
-                                Ceres, Western Cape
-                            </p>
+                        <article class="contact-card">
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                                    <path d="m4 7 8 6 8-6"></path>
+                                </svg>
+                            </span>
+                            <div>
+                                <h3>Email</h3>
+                                <a href="mailto:matilda@sweetspot.co.za">matilda@sweetspot.co.za</a>
+                            </div>
+                        </article>
 
-                        </div>
-
-                        <div class="contact-item">
-
-                            <h3>📞 Phone</h3>
-
-                            <p>
-                                <a href="tel:0230070299">
-                                    023 007 0299
-                                </a>
-                            </p>
-
-                        </div>
-
-                        <div class="contact-item">
-
-                            <h3>✉️ Email</h3>
-
-                            <p>
-                                <a href="mailto:matilda@sweetspot.co.za">
-                                    matilda@sweetspot.co.za
-                                </a>
-                            </p>
-
-                        </div>
+                        <article class="contact-card">
+                            <span class="contact-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="9"></circle>
+                                    <path d="M12 7v5l3 2"></path>
+                                </svg>
+                            </span>
+                            <div>
+                                <h3>Opening Hours</h3>
+                                <p>Please contact Homegrown to confirm current trading hours.</p>
+                            </div>
+                        </article>
 
                     </div>
 
                     <div class="contact-buttons">
-
-                        <a
-                            href="tel:0230070299"
-                            class="button">
-                            Call Us
-                        </a>
-
+                        <a href="tel:+27230070299" class="button">Call Us</a>
                         <a
                             href="https://wa.me/27230070299"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="button whatsapp">
+                            class="button whatsapp"
+                        >
                             WhatsApp Us
                         </a>
-
                     </div>
 
                 </div>
 
-                <div class="map-container">
-
+                <div class="map-container reveal">
                     <iframe
                         src="https://www.google.com/maps?q=Homegrown+Bakery+Cafe+Ceres+Western+Cape&output=embed"
                         width="100%"
-                        height="450"
+                        height="520"
                         style="border:0;"
                         allowfullscreen
                         loading="lazy"
-                        title="Map showing Homegrown Bakery Cafe in Ceres">
-                    </iframe>
-
+                        title="Map showing Homegrown Bakery Cafe in Ceres"
+                    ></iframe>
                 </div>
 
             </div>
@@ -851,22 +804,15 @@
 
         <section class="final-cta">
 
-            <div class="final-cta-content">
-
+            <div class="final-cta-content reveal">
                 <p class="small-heading">COME EXPERIENCE HOMEGROWN</p>
-
                 <h2>Good food.<br>Good people.<br>Good times.</h2>
-
                 <p>
                     Whether you're stopping by for coffee, picking up
                     something freshly baked or spending the afternoon
                     with family, we'd love to welcome you.
                 </p>
-
-                <a href="#contact" class="button">
-                    Plan Your Visit
-                </a>
-
+                <a href="#contact" class="button">Plan Your Visit</a>
             </div>
 
         </section>
@@ -874,9 +820,12 @@
     </main>
 
 
-    <a href="#home" class="back-to-top" aria-label="Back to top">
-        ↑
+    <a class="floating-call" href="tel:+27230070299">
+        <span aria-hidden="true">☎</span>
+        Call Now
     </a>
+
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top">↑</a>
 
 
     <footer>
@@ -884,61 +833,55 @@
         <div class="footer-content">
 
             <div class="footer-brand">
-
-                <div class="logo">
+                <a class="logo footer-logo" href="#home">
                     HOMEGROWN
                     <span>BAKERY CAFE</span>
-                </div>
-
-                <p>
-                    Freshly baked. Locally grown.
-                </p>
-
+                </a>
+                <p>Freshly baked. Locally grown.</p>
             </div>
 
             <div class="footer-links">
-
                 <h3>Explore</h3>
-
-                <a href="#home">Home</a>
                 <a href="#about">About</a>
+                <a href="#featured">Favourites</a>
                 <a href="#menu">Menu</a>
                 <a href="#experience">Experience</a>
                 <a href="#gallery">Gallery</a>
-
             </div>
 
             <div class="footer-contact">
+                <h3>Visit</h3>
+                <p>1924 Phillip Street<br>Ceres, Western Cape</p>
+                <a href="tel:+27230070299">023 007 0299</a>
+                <a href="mailto:matilda@sweetspot.co.za">matilda@sweetspot.co.za</a>
+            </div>
 
-                <h3>Visit Us</h3>
-
-                <p>
-                    1924 Phillip Street<br>
-                    Ceres, Western Cape
-                </p>
-
-                <a href="tel:0230070299">
-                    023 007 0299
+            <div class="footer-actions">
+                <h3>Connect</h3>
+                <a
+                    href="https://www.google.com/maps/search/?api=1&query=Homegrown+Bakery+Cafe+Ceres+Western+Cape"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Google Maps
                 </a>
-
+                <a
+                    href="https://wa.me/27230070299"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    WhatsApp
+                </a>
             </div>
 
         </div>
 
         <div class="footer-bottom">
-
-            <p>
-                © 2026 Homegrown Bakery Cafe
-            </p>
-
-            <p>
-                Website concept by Devan
-            </p>
-
+            <p>© 2026 Homegrown Bakery Cafe</p>
+            <p>Website concept by Devan</p>
         </div>
 
     </footer>
-
 
     <script src="script.js"></script>
 
