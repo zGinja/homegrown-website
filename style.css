@@ -158,79 +158,196 @@ header {
 
 .about {
     max-width: 1200px;
-    margin: auto;
-    padding: 100px 30px;
+    margin: 85px auto;
+    padding: 80px 65px;
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 70px;
     align-items: center;
+    gap: 80px;
+
+    background-color: #eee6d6;
+    border-radius: 28px;
 }
 
 .about-text h2 {
-    font-size: 48px;
-    line-height: 1.1;
-    color: #394936;
     margin-bottom: 25px;
+
+    color: #394936;
+    font-size: 50px;
+    line-height: 1.08;
 }
 
-.about-text p {
-    margin-bottom: 18px;
+.about-text > p {
     max-width: 550px;
+    margin-bottom: 18px;
+
+    color: #505248;
+}
+
+.about-quote {
+    margin-top: 28px;
+    margin-bottom: 30px !important;
+
+    color: #b88942 !important;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-style: italic;
+}
+
+
+/* FEATURE LIST */
+
+.about-features {
+    display: grid;
+    gap: 14px;
+}
+
+.about-feature {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+    gap: 15px;
+    align-items: center;
+
+    padding: 15px 0;
+
+    border-top: 1px solid rgba(57, 73, 54, 0.16);
+}
+
+.about-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(113, 128, 93, 0.14);
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+.about-feature h3 {
+    margin-bottom: 2px;
+
+    color: #394936;
+    font-size: 16px;
+}
+
+.about-feature p {
+    margin: 0;
+
+    color: #66685f;
+    font-size: 14px;
+}
+
+
+/* IMAGE AREA */
+
+.about-visual {
+    position: relative;
+
+    min-height: 520px;
+}
+
+.about-accent {
+    position: absolute;
+
+    top: 20px;
+    right: 5px;
+
+    width: 76%;
+    height: 80%;
+
+    background-color: #71805d;
+    border-radius: 30px;
+
+    opacity: 0.9;
+}
+
+.about-image {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 92%;
+    height: 470px;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    transform: rotate(-1deg);
+
+    box-shadow: 0 18px 40px rgba(45, 50, 40, 0.17);
+}
+
+.about-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(35, 45, 32, 0.22),
+        transparent 60%
+    );
+
+    pointer-events: none;
 }
 
 .about-image img {
     width: 100%;
-    height: 500px;
+    height: 100%;
+
     object-fit: cover;
+    object-position: center;
+
+    filter:
+        brightness(92%)
+        saturate(88%)
+        contrast(92%);
 }
 
 
-/* =========================
-   MENU
-========================= */
+/* BADGE */
 
-.menu {
-    background-color: #e8e2d4;
-    padding: 100px 30px;
-}
+.about-badge {
+    position: absolute;
 
-.section-heading {
-    text-align: center;
-    max-width: 700px;
-    margin: 0 auto 60px;
-}
+    right: 0;
+    bottom: 30px;
 
-.section-heading h2 {
-    font-size: 48px;
-    color: #394936;
-    line-height: 1.1;
-    margin-bottom: 20px;
-}
+    padding: 17px 21px;
 
-.menu-cards {
-    max-width: 1100px;
-    margin: auto;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.menu-card {
     background-color: #f8f5ed;
-    padding: 40px 30px;
-    text-align: center;
-    border: 1px solid #d8d0c0;
+    border: 1px solid rgba(57, 73, 54, 0.1);
+    border-radius: 15px;
+
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
 }
 
-.menu-card h3 {
+.about-badge strong,
+.about-badge span {
+    display: block;
+}
+
+.about-badge strong {
     color: #394936;
-    font-size: 24px;
-    margin-bottom: 15px;
+    font-size: 16px;
 }
 
+.about-badge span {
+    margin-top: 3px;
 
+    color: #b88942;
+    font-size: 11px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+}
 /* =========================
    EXPERIENCE
 ========================= */
@@ -394,13 +511,51 @@ footer .logo {
         min-height: 75vh;
     }
 
-    .about {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
+  /* ABOUT */
 
-    .about-image img {
-        height: 350px;
+.about {
+    margin: 40px 15px;
+    padding: 55px 25px;
+
+    grid-template-columns: 1fr;
+    gap: 45px;
+
+    border-radius: 20px;
+}
+
+.about-text h2 {
+    font-size: 38px;
+}
+
+.about-quote {
+    font-size: 24px;
+}
+
+.about-visual {
+    min-height: 410px;
+}
+
+.about-accent {
+    top: 15px;
+    right: 0;
+
+    width: 75%;
+    height: 75%;
+}
+
+.about-image {
+    width: 94%;
+    height: 380px;
+
+    transform: rotate(-1deg);
+}
+
+.about-badge {
+    right: 0;
+    bottom: 18px;
+
+    padding: 14px 17px;
+}
     }
 
     .menu-cards {
